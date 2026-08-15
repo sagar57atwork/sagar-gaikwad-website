@@ -14,7 +14,7 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 
 // Canonical base — update when the site is deployed to a real domain.
-const SITE = "https://sagargaikwad.com";
+const SITE = "https://sagar-gaikwad-website.pages.dev";
 
 const { title, description, pubDate, category, author, tags } = post.data;
 const postUrl = `${SITE}/insights/${post.id}`;

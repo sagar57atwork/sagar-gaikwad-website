@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sagargaikwad.com/sitemap.xml
+Sitemap: https://sagar-gaikwad-website.pages.dev/sitemap.xml
