@@ -1,0 +1,102 @@
+---
+const SITE = "https://sagargaikwad.com";
+
+const projects = [
+  { slug: "ripple-fable-research-os", type: "PRODUCT / SYSTEM", title: "Ripple Fable Research OS", summary: "A structured marketing research workspace connecting business research, evidence, findings, insights, strategy and reports.", tags: ["Research", "AI", "Strategy"] },
+  { slug: "retention-engine", type: "AGENCY SYSTEM", title: "Retention Engine", summary: "An agency operating system for clients, projects, retention, strategy, analytics, tasks and delivery.", tags: ["Notion", "Agency Ops", "Retention"] },
+  { slug: "competitive-intelligence-report", type: "STRATEGIC PROJECT", title: "Competitive Intelligence Report", summary: "A structured competitive research system for market positioning, competitors and strategic opportunities.", tags: ["Research", "Acquisition"] },
+  { slug: "local-search-growth", type: "PRACTICE CASE STUDY", title: "Local Search Growth", summary: "A research-led approach to Google Business Profile, local SEO and customer acquisition for local businesses.", tags: ["Positioning", "Growth"] },
+  { slug: "luma-living", type: "PRACTICE CASE STUDY", title: "Luma Living", summary: "A brand launch and go-to-market strategy exploring positioning, audience and growth direction.", tags: ["Brand", "GTM", "Strategy"] },
+  { slug: "harvest-hearth", type: "PRACTICE CASE STUDY", title: "Harvest & Hearth", summary: "A strategic exploration of digital positioning, content and growth for a restaurant brand.", tags: ["Strategy", "Content", "Growth"] },
+];
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work | Sagar Gaikwad</title>
+        <meta name="description" content="Selected work, systems and strategic projects by Sagar Gaikwad." />
+    <link rel="canonical" href={`${SITE}/work`} />
+
+    <meta property="og:title" content="Work | Sagar Gaikwad" />
+    <meta property="og:description" content="Selected work, systems and strategic projects by Sagar Gaikwad." />
+    <meta property="og:url" content={`${SITE}/work`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sagar Gaikwad" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Work | Sagar Gaikwad" />
+    <meta name="twitter:description" content="Selected work, systems and strategic projects by Sagar Gaikwad." />
+    <style>
+      :root{--paper:#f7f6f2;--ink:#171717;--muted:#666660;--line:#d9d7d0;--orange:#f57722;--max:1100px}
+      *{box-sizing:border-box}
+      body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,sans-serif;line-height:1.6}
+      a{color:inherit;text-decoration:none}
+      .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+      nav{border-bottom:1px solid var(--line)}
+      .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+      .brand{font-weight:650}.back{color:var(--muted);font-size:14px}
+      main{padding:100px 0 130px}
+      .eyebrow{color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+      h1{margin:20px 0 70px;font-size:clamp(52px,8vw,88px);line-height:.98;letter-spacing:-.06em;font-weight:600}
+      .work-list{border-top:1px solid var(--line)}
+      .work-item{display:grid;grid-template-columns:60px 160px 1fr 30px;gap:25px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}
+      .work-number{color:var(--muted);font-size:13px}
+      .work-type{color:var(--orange);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+      .work-content h2{margin:0 0 8px;font-size:25px;letter-spacing:-.025em;font-weight:550}
+      .work-content p{margin:0 0 14px;color:var(--muted);font-size:15px;max-width:620px}
+      .work-tags{display:flex;flex-wrap:wrap;gap:8px}
+      .tag{color:var(--muted);font-size:12px;border:1px solid var(--line);padding:4px 10px;border-radius:2px}
+      .work-arrow{color:var(--orange);font-size:18px}
+      .cta{margin-top:70px;padding-top:40px;border-top:1px solid var(--line)}
+      .cta a{color:var(--orange);font-size:20px;font-weight:600}
+      footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+      .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+      .footer-id{line-height:1.5}.footer-name{color:var(--ink);font-weight:650}
+      .footer-studio{margin-top:6px;color:var(--orange);font-size:12px}
+      .footer-links{display:flex;gap:22px;flex-wrap:wrap}
+      .footer-links a:hover{color:var(--ink)}
+      @media(max-width:700px){main{padding-top:70px}.work-item{grid-template-columns:40px 1fr 25px;gap:15px}.work-type{display:none}}
+    </style>
+  </head>
+  <body>
+    <nav><div class="container nav">
+      <a href="/" class="brand">Sagar Gaikwad</a>
+      <a href="/#contact" class="back">Let's talk →</a>
+    </div></nav>
+    <main><div class="container">
+      <div class="eyebrow">Selected work</div>
+      <h1>Work & systems.</h1>
+      <div class="work-list">
+        {projects.map((p, i) => (
+          <a class="work-item" href={`/work/${p.slug}`}>
+            <div class="work-number">{String(i + 1).padStart(2, "0")}</div>
+            <div class="work-type">{p.type}</div>
+            <div class="work-content">
+              <h2>{p.title}</h2>
+              <p>{p.summary}</p>
+              <div class="work-tags">{p.tags.map((t) => <span class="tag">{t}</span>)}</div>
+            </div>
+            <div class="work-arrow">↗</div>
+          </a>
+        ))}
+      </div>
+      <div class="cta"><a href="/#contact">Let's talk →</a></div>
+    </div></main>
+    <footer><div class="container footer-inner">
+      <div class="footer-id">
+        <div class="footer-name">Sagar Gaikwad</div>
+        <div>Marketing Strategist</div>
+        <div class="footer-studio">Building Ripple Fable Studio</div>
+      </div>
+      <div class="footer-links">
+        <a href="/work">Work</a>
+        <a href="/insights">Insights</a>
+        <a href="https://www.linkedin.com/in/sagargaikwadofficial/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/sagar57atwork" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:sagar57.atwork@gmail.com">Email</a>
+        <a href="/resume.pdf">Resume</a>
+      </div>
+    </div></footer>
+  </body>
+</html>
