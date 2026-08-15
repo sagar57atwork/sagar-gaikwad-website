@@ -1,1 +1,109 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9"><url><loc>https://sagargaikwad.com/</loc><lastmod>2026-08-15</lastmod><changefreq> daily</changefreq><priority>1.0</priority></url><url><loc>https://sagargaikwad.com/work</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.8</priority></url><url><loc>https://sagargaikwad.com/insights</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.8</priority></url><url><loc>https://sagargaikwad.com/linkedin</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.8</priority></url><url><loc>https://sagargaikwad.com/privacy-policy</loc><lastmod>2026-08-15</lastmod><changefreq> yearly</changefreq><priority>0.3</priority></url><url><loc>https://sagargaikwad.com/terms</loc><lastmod>2026-08-15</lastmod><changefreq> yearly</changefreq><priority>0.3</priority></url><url><loc>https://sagargaikwad.com/resume.pdf</loc><lastmod>2026-08-15</lastmod><changefreq> yearly</changefreq><priority>0.3</priority></url><url><loc>https://sagargaikwad.com/404</loc><lastmod>2026-08-15</lastmod><changefreq> yearly</changefreq><priority>0.3</priority></url><url><loc>https://sagargaikwad.com/work/ripple-fable-research-os</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url><url><loc>https://sagargaikwad.com/work/retention-engine</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url><url><loc>https://sagargaikwad.com/work/competitive-intelligence-report</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url><url><loc>https://sagargaikwad.com/work/local-search-growth</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url><url><loc>https://sagargaikwad.com/work/luma-living</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url><url><loc>https://sagargaikwad.com/work/harvest-hearth</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url><url><loc>https://sagargaikwad.com/insights/marketing-strategy-test</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url><url><loc>https://sagargaikwad.com/insights/what-ai-changes-about-modern-marketing-research</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url><url><loc>https://sagargaikwad.com/insights/why-good-content-strategy-starts-with-positioning</loc><lastmod>2026-08-15</lastmod><changefreq> monthly</changefreq><priority>0.6</priority></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/work</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/insights</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/linkedin</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/work/ripple-fable-research-os</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/work/retention-engine</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/work/competitive-intelligence-report</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/work/local-search-growth</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/work/luma-living</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/work/harvest-hearth</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/insights/marketing-strategy-test</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/insights/what-ai-changes-about-modern-marketing-research</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/insights/why-good-content-strategy-starts-with-positioning</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/privacy-policy</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://sagar-gaikwad-website.pages.dev/terms</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
