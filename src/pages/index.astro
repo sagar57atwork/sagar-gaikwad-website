@@ -992,6 +992,36 @@ const slugify = (value) =>
         }
       }
     </style>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${SITE}/#person`,
+        "name": "Sagar Gaikwad",
+        "url": SITE,
+        "image": `${SITE}/sagar-profile.png`,
+        "jobTitle": "Marketing Strategist",
+        "description": "Marketing Strategist focused on marketing strategy, research, SEO, content, positioning, AI-powered marketing and growth.",
+        "sameAs": [
+          "https://www.linkedin.com/in/sagargaikwadofficial/",
+          "https://github.com/sagar57atwork"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE}/#website`,
+        "url": SITE,
+        "name": "Sagar Gaikwad",
+        "description": "Sagar Gaikwad — Marketing Strategist focused on strategy, research, SEO, content, positioning and AI-powered marketing.",
+        "publisher": {
+          "@id": `${SITE}/#person`
+        }
+      }
+    ]
+  }
+</script>
   </head>
 
   <body>
