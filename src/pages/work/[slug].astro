@@ -53,6 +53,20 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={`${project.title} | Sagar Gaikwad`} />
     <meta name="twitter:description" content={`${project.title} — selected work by Sagar Gaikwad.`} />
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": title,
+    "description": summary,
+    "url": `${SITE}/work/${project.slug}`,
+    "creator": {
+      "@type": "Person",
+      "name": "Sagar Gaikwad",
+      "url": SITE
+    }
+  }
+</script>
     <style>
       :root {
         --paper: #f7f6f2;
