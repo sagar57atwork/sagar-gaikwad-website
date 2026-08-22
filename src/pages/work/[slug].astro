@@ -1,12 +1,20 @@
 ---
 export function getStaticPaths() {
   const projects = [
+    {
+  slug: "dermabay-proof-gap",
+  type: "STRATEGIC RESEARCH",
+  title: "Dermabay: The Proof Gap",
+  summary:
+    "An independent strategic growth investigation into how science-backed credibility can become a more distinctive reason to choose.",
+  role: "Digital Marketing Strategist",
+  tools: ["Market Research", "Consumer Research", "Competitive Intelligence", "Strategy"],
+  tags: ["Research", "Strategy", "Consumer Insight", "Growth"],
+},
     { slug: "ripple-fable-research-os", type: "PRODUCT / SYSTEM", title: "Ripple Fable Research OS", summary: "A Windows-based marketing research workspace designed to turn scattered research into structured, usable analysis.", role: "Product / Research", tools: ["Windows App", "Research", "Strategy"], tags: ["Research", "AI", "Strategy"] },
     { slug: "retention-engine", type: "AGENCY SYSTEM", title: "Retention Engine", summary: "A Notion operating system for managing clients, projects, retention, strategy, analytics and delivery.", role: "Agency Operations", tools: ["Notion", "Agency Ops", "Retention"], tags: ["Notion", "Agency Ops", "Retention"] },
-    { slug: "competitive-intelligence-report", type: "STRATEGIC PROJECT", title: "Competitive Intelligence Report", summary: "A structured competitive research system for understanding market positioning, competitors and opportunities.", role: "Research / Strategy", tools: ["Research", "Analysis"], tags: ["Research", "Acquisition"] },
     { slug: "local-search-growth", type: "PRACTICE CASE STUDY", title: "Local Search Growth", summary: "A research-led approach to Google Business Profile, local SEO and customer acquisition for local businesses.", role: "Practice Case Study", tools: ["SEO", "Local Search"], tags: ["Positioning", "Growth"] },
-    { slug: "luma-living", type: "PRACTICE CASE STUDY", title: "Luma Living", summary: "A brand launch and go-to-market strategy exploring positioning, audience and growth direction.", role: "Practice Case Study", tools: ["Brand", "GTM"], tags: ["Brand", "GTM", "Strategy"] },
-    { slug: "harvest-hearth", type: "PRACTICE CASE STUDY", title: "Harvest & Hearth", summary: "A strategic exploration of digital positioning, content and growth for a restaurant brand.", role: "Practice Case Study", tools: ["Strategy", "Content"], tags: ["Strategy", "Content", "Growth"] },
+    { slug: "not-worth-the-trip-zepto", type: "STRATEGY / CAMPAIGN", title: "Not Worth The Trip", summary: "A research-led strategic case study exploring how Zepto could move beyond the 10-minute delivery promise and own a more relevant form of urban convenience.", role: "Marketing Strategist", tools: ["Research", "Consumer Research", "Competitive Analysis", "Strategic Positioning", "Consumer Insight", "Campaign Strategy", "Creative Strategy", "Localisation", "Content Strategy", "Measurement Strategy"], tags: ["Research", "Strategy", "Consumer Insight", "Campaign"] },
   ];
   return projects.map((project, index) => ({
     params: { slug: project.slug },
@@ -21,16 +29,9 @@ const SITE = "https://sagar-gaikwad-website.pages.dev";
 
 const isPractice = /practice|concept/i.test(type);
 
-const detailSections = [
-  "Context",
-  "The problem",
-  "Objective",
-  "Research / approach",
-  "Key findings",
-  "Strategic thinking",
-  "Solution / system / execution",
-  "Outcome or learning",
-];
+const isDermabay = project.slug === "dermabay-proof-gap";
+const isResearchOS = project.slug === "ripple-fable-research-os";
+const isZepto = project.slug === "not-worth-the-trip-zepto";
 
 const prevProject = index > 0 ? projectsList[index - 1] : null;
 const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : null;
@@ -338,6 +339,386 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
           max-width: 100%;
         }
       }
+            .case-study {
+        margin-top: 75px;
+      }
+
+      .case-intro {
+        max-width: 760px;
+        padding: 45px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .case-kicker {
+        color: var(--orange);
+        font-size: 11px;
+        font-weight: 750;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .case-intro h2 {
+        margin: 0 0 18px;
+        font-size: clamp(28px, 4vw, 46px);
+        line-height: 1.08;
+        letter-spacing: -.04em;
+      }
+
+      .case-intro p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      .case-meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 30px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .case-meta-label {
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+      }
+
+      .case-meta-value {
+        font-size: 14px;
+      }
+
+      .case-section {
+        padding: 70px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .case-section-label {
+        color: var(--orange);
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .case-section h2 {
+        max-width: 850px;
+        margin: 0 0 20px;
+        font-size: clamp(30px, 4vw, 52px);
+        line-height: 1.05;
+        letter-spacing: -.045em;
+      }
+
+      .case-section p {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .case-highlight {
+        margin-top: 35px;
+        padding: 30px;
+        border-left: 3px solid var(--orange);
+        background: #efede7;
+        font-size: clamp(22px, 3vw, 34px);
+        line-height: 1.25;
+        letter-spacing: -.025em;
+      }
+
+      .case-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 35px;
+      }
+
+      .case-card {
+        border: 1px solid var(--line);
+        padding: 25px;
+        min-height: 150px;
+      }
+
+      .case-card-number {
+        color: var(--muted);
+        font-size: 12px;
+        margin-bottom: 18px;
+      }
+
+      .case-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        letter-spacing: -.02em;
+      }
+
+      .case-card p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .case-framework {
+        margin-top: 35px;
+        padding: 35px;
+        border: 1px solid var(--line);
+      }
+
+      .case-framework-flow {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        font-size: 15px;
+      }
+
+      .case-framework-flow span {
+        padding: 9px 13px;
+        border: 1px solid var(--line);
+      }
+
+      .case-arrow {
+        color: var(--orange);
+        border: none !important;
+        padding: 0 !important;
+      }
+
+      .case-pdf {
+        margin-top: 35px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--orange);
+        font-size: 17px;
+        font-weight: 650;
+      }
+
+      .case-disclaimer {
+        margin-top: 35px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+      
+      .product-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.product-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 22px;
+  border: 1px solid var(--ink);
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.product-action span {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.product-action-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.product-action-primary:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.product-action-secondary {
+  background: transparent;
+  color: var(--ink);
+}
+
+.product-action-secondary:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .product-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-action {
+    width: 100%;
+  }
+}
+
+      @media (max-width: 700px) {
+        .case-meta {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .case-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .case-section {
+          padding: 50px 0;
+        }
+
+        .case-framework-flow {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .case-arrow {
+          transform: rotate(90deg);
+        }
+      }
+      /* Evidence & screenshots */
+.evidence {
+  margin-top: 120px;
+  padding-top: 80px;
+  border-top: 1px solid var(--line);
+}
+
+.evidence h2 {
+  margin-bottom: 20px;
+}
+
+.evidence > p {
+  max-width: 720px;
+  margin-bottom: 50px;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 28px;
+}
+
+.evidence-card {
+  margin: 0;
+}
+
+.evidence-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+.evidence-card-link {
+  display: block;
+  overflow: hidden;
+  cursor: zoom-in;
+  border: 1px solid var(--line);
+}
+
+.evidence-card-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  transition: transform 0.3s ease;
+}
+
+.evidence-card-link:hover img {
+  transform: scale(1.025);
+}
+
+.evidence-card figcaption {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .evidence-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .evidence {
+    margin-top: 80px;
+    padding-top: 60px;
+  }
+}
+
+    /* Zepto evidence lightbox */
+      .evidence-trigger {
+        position: relative;
+        display: block;
+        cursor: zoom-in;
+      }
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(20, 20, 18, 0.93);
+        padding: 28px;
+      }
+      .lightbox.open {
+        display: flex;
+      }
+      .lightbox-figure {
+        margin: 0;
+        max-width: 1200px;
+        width: 100%;
+        text-align: center;
+      }
+      .lightbox-figure img {
+        display: block;
+        max-width: 100%;
+        max-height: 80vh;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+      .lightbox-figure figcaption {
+        margin-top: 16px;
+        color: var(--paper);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: var(--paper);
+        font-size: 34px;
+        line-height: 1;
+        cursor: pointer;
+        padding: 6px;
+      }
+      .lightbox-close:hover {
+        color: var(--orange);
+      }
     </style>
   </head>
   <body>
@@ -355,14 +736,1171 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
         </div>
         {isPractice && <div class="practice">Practice Case Study</div>}
 
-        <div class="sections">
-          {detailSections.map((label) => (
-            <div class="detail-section">
-              <div class="detail-label">{label}</div>
-              <p class="detail-note">Details to be curated for this project.</p>
-            </div>
-          ))}
+        {isDermabay ? (
+  <div class="case-study">
+
+    <section class="case-intro">
+      <div class="case-kicker">Independent Strategic Investigation</div>
+
+      <h2>
+        When “science-backed” stops being a differentiator.
+      </h2>
+
+      <p>
+        An independent strategic growth investigation into Dermabay,
+        examining brand positioning, customer language, competitive
+        communication, marketing signals and opportunities for
+        proof-led differentiation.
+      </p>
+    </section>
+
+    <div class="case-meta">
+      <div>
+        <div class="case-meta-label">Project type</div>
+        <div class="case-meta-value">
+          Public-data research project
         </div>
+      </div>
+
+      <div>
+        <div class="case-meta-label">Role</div>
+        <div class="case-meta-value">
+          Digital Marketing Strategist
+        </div>
+      </div>
+
+      <div>
+        <div class="case-meta-label">Focus</div>
+        <div class="case-meta-value">
+          Research · Strategy · Consumer Insight
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="case-section-label">01 / Strategic thesis</div>
+
+      <h2>
+        The opportunity is not simply to do more marketing.
+      </h2>
+
+      <p>
+        The investigation examined how existing scientific credibility,
+        product evidence and customer proof could be connected into a
+        clearer strategic reason to choose.
+      </p>
+
+      <div class="case-highlight">
+        Science exists. But science alone isn't distinctive.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">02 / Research approach</div>
+
+      <h2>Six angles. One strategic investigation.</h2>
+
+      <div class="case-grid">
+
+        <div class="case-card">
+          <div class="case-card-number">01</div>
+          <h3>Brand</h3>
+          <p>What does the brand say it stands for?</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">02</div>
+          <h3>Product</h3>
+          <p>Where does visible customer traction appear?</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">03</div>
+          <h3>Customer</h3>
+          <p>What language do customers actually use?</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">04</div>
+          <h3>Category</h3>
+          <p>What are competitors already claiming?</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">05</div>
+          <h3>Marketing</h3>
+          <p>How are education, products and authority connected?</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">06</div>
+          <h3>Journey</h3>
+          <p>What happens from discovery to purchase to repeat?</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">03 / Research finding</div>
+
+      <h2>
+        Customers may discover through science — but choose through
+        benefits, experience and proof.
+      </h2>
+
+      <p>
+        Customer language was examined alongside product and category
+        evidence to identify the gap between what a brand can claim and
+        what customers actually use to evaluate a product.
+      </p>
+
+      <div class="case-highlight">
+        The strategic question becomes: how can scientific credibility
+        become visible, specific and consumer-relevant proof?
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">04 / Competitive intelligence</div>
+
+      <h2>
+        Competitors are translating science into different territories.
+      </h2>
+
+      <p>
+        The competitive review examined how science, ingredients,
+        testing, authority and consumer experience are communicated
+        across the category.
+      </p>
+
+      <div class="case-highlight">
+        The opportunity is not to claim “more science” — it is to make
+        the proof more distinctive and useful to the customer.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">05 / Strategic framework</div>
+
+      <h2>
+        From feature-led communication to proof-backed choice.
+      </h2>
+
+      <div class="case-framework">
+
+        <div class="case-framework-flow">
+          <span>Science</span>
+          <span class="case-arrow">→</span>
+          <span>Real Problem</span>
+          <span class="case-arrow">→</span>
+          <span>Formulation</span>
+          <span class="case-arrow">→</span>
+          <span>Proof</span>
+          <span class="case-arrow">→</span>
+          <span>Product</span>
+          <span class="case-arrow">→</span>
+          <span>Experience</span>
+          <span class="case-arrow">→</span>
+          <span>Customer Proof</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">06 / Proposed strategic system</div>
+
+      <h2>Proof-Led Growth</h2>
+
+      <p>
+        A proposed system connecting scientific credibility,
+        formulation, product experience and customer evidence into a
+        more coherent growth narrative.
+      </p>
+
+      <div class="case-highlight">
+        Problem → Explain → Formulate → Prove → Demonstrate → Product →
+        Customer Experience
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">07 / Experimentation</div>
+
+      <h2>
+        Turn the strategic hypothesis into something measurable.
+      </h2>
+
+      <p>
+        The proposed experiment compares generic claim-led communication
+        with a problem-and-proof approach, using product-page behaviour
+        as the primary signal.
+      </p>
+
+      <div class="case-grid">
+
+        <div class="case-card">
+          <h3>Control</h3>
+          <p>Generic claim-based communication.</p>
+        </div>
+
+        <div class="case-card">
+          <h3>Variant</h3>
+          <p>Problem + proof-led communication.</p>
+        </div>
+
+        <div class="case-card">
+          <h3>Primary signal</h3>
+          <p>Content → Product Page → Add-to-Cart.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">08 / 90-day roadmap</div>
+
+      <h2>Build proof. Put proof into market. Compound winners.</h2>
+
+      <div class="case-grid">
+
+        <div class="case-card">
+          <div class="case-card-number">0–30</div>
+          <h3>Build the Proof Library</h3>
+          <p>
+            Organise scientific, formulation, product and customer proof.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">31–60</div>
+          <h3>Put Proof into the Market</h3>
+          <p>
+            Translate proof into content, product communication and
+            customer-facing experiences.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">61–90</div>
+          <h3>Compound the Winners</h3>
+          <p>
+            Measure the strongest signals and develop the most effective
+            proof territories further.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">09 / Measurement</div>
+
+      <h2>Measure the system, not just attention.</h2>
+
+      <div class="case-framework">
+        <div class="case-framework-flow">
+          <span>Attention</span>
+          <span class="case-arrow">→</span>
+          <span>Consideration</span>
+          <span class="case-arrow">→</span>
+          <span>Conversion</span>
+          <span class="case-arrow">→</span>
+          <span>Retention</span>
+          <span class="case-arrow">→</span>
+          <span>Advocacy</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">10 / Final thesis</div>
+
+      <h2>
+        Connect the assets differently.
+      </h2>
+
+      <div class="case-highlight">
+        Science & R&D → Formulation + Product Experience →
+        Customer Proof → Proof-Led Choice
+      </div>
+
+      <p>
+        The strategic opportunity identified through the investigation
+        is proof-led differentiation: turning existing scientific,
+        product and customer assets into a clearer reason to choose.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">Full research deck</div>
+
+      <h2>Read the complete investigation.</h2>
+
+      <a
+        class="case-pdf"
+        href="/projects/dermabay/dermabay-proof-gap.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        View the full PDF research deck →
+      </a>
+
+      <div class="case-disclaimer">
+        Independent public-data research project. Not commissioned client
+        work. No campaign was executed and no performance results are
+        claimed. Strategic recommendations are proposed based on
+        publicly available evidence.
+      </div>
+    </section>
+
+  </div>
+) : isResearchOS ? (
+  <div class="case-study">
+
+    <section class="case-intro">
+      <div class="case-kicker">Product / Research System</div>
+
+      <h2>
+        Research without the research mess.
+      </h2>
+
+      <p>
+        Ripple Fable Research OS is a Windows-based workspace designed to
+        turn scattered marketing research into structured evidence,
+        findings, insights and strategy — in one place.
+      </p>
+    </section>
+
+    <div class="case-meta">
+      <div>
+        <div class="case-meta-label">Product type</div>
+        <div class="case-meta-value">
+          Windows Research Workspace
+        </div>
+      </div>
+
+      <div>
+        <div class="case-meta-label">Role</div>
+        <div class="case-meta-value">
+          Product / Research
+        </div>
+      </div>
+
+      <div>
+        <div class="case-meta-label">Built for</div>
+        <div class="case-meta-value">
+          Marketers · Strategists · Agencies · Founders
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="case-section-label">01 / The problem</div>
+
+      <h2>
+        Marketing research is usually scattered across everything.
+      </h2>
+
+      <p>
+        Browser tabs. Documents. Spreadsheets. Notes. Screenshots.
+        AI conversations. Competitor research. Customer evidence.
+        The information exists — but the thinking becomes fragmented.
+      </p>
+
+      <div class="case-highlight">
+        The problem wasn't access to information. It was turning information
+        into a usable strategic system.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">02 / The idea</div>
+
+      <h2>
+        Build the workspace around the research process.
+      </h2>
+
+      <p>
+        Instead of starting with a chatbot, Research OS starts with the
+        workflow a strategist actually follows — from understanding the
+        business to producing strategic recommendations.
+      </p>
+
+      <div class="case-framework">
+        <div class="case-framework-flow">
+          <span>Business</span>
+          <span class="case-arrow">→</span>
+          <span>Research</span>
+          <span class="case-arrow">→</span>
+          <span>Evidence</span>
+          <span class="case-arrow">→</span>
+          <span>Findings</span>
+          <span class="case-arrow">→</span>
+          <span>Insights</span>
+          <span class="case-arrow">→</span>
+          <span>Strategy</span>
+          <span class="case-arrow">→</span>
+          <span>Recommendations</span>
+          <span class="case-arrow">→</span>
+          <span>Report</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">03 / Inside the system</div>
+
+      <h2>
+        A research workspace, not another AI chat window.
+      </h2>
+
+      <div class="case-grid">
+
+        <div class="case-card">
+          <div class="case-card-number">01</div>
+          <h3>Projects</h3>
+          <p>
+            Keep individual research initiatives organised inside dedicated
+            workspaces.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">02</div>
+          <h3>Research Sections</h3>
+          <p>
+            Break research into focused areas instead of keeping everything
+            in one document.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">03</div>
+          <h3>Signals</h3>
+          <p>
+            Surface market, competitor, audience and search signals that
+            deserve attention.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">04</div>
+          <h3>Reports</h3>
+          <p>
+            Turn completed research into structured strategic deliverables.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">05</div>
+          <h3>Library</h3>
+          <p>
+            Keep reusable templates, frameworks, prompts and research
+            resources accessible.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">06</div>
+          <h3>AI-assisted Research</h3>
+          <p>
+            Use structured AI prompt workflows without losing the strategist's
+            control over the research process.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">04 / Research workflow</div>
+
+      <h2>
+        From raw information to strategic thinking.
+      </h2>
+
+      <div class="case-framework">
+        <div class="case-framework-flow">
+          <span>Collect</span>
+          <span class="case-arrow">→</span>
+          <span>Organise</span>
+          <span class="case-arrow">→</span>
+          <span>Analyse</span>
+          <span class="case-arrow">→</span>
+          <span>Find Patterns</span>
+          <span class="case-arrow">→</span>
+          <span>Build Insights</span>
+          <span class="case-arrow">→</span>
+          <span>Make Decisions</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">05 / Product capability</div>
+
+      <h2>
+        The interface makes the thinking visible.
+      </h2>
+
+      <p>
+        The product is designed to show progress, research coverage,
+        active signals, findings and deliverables without forcing the user
+        to reconstruct the state of a project from multiple tools.
+      </p>
+
+      <div class="case-highlight">
+        Research becomes a visible workflow — not a pile of open tabs.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">06 / Why I built it</div>
+
+      <h2>
+        I wanted a better operating environment for strategic research.
+      </h2>
+
+      <p>
+        The product came from treating marketing research as a system rather
+        than a collection of tasks. The goal was to create a workspace where
+        research can move naturally from evidence to thinking to action.
+      </p>
+    </section>
+    <section class="case-section">
+      <div class="case-section-label">07 / Product interface</div>
+
+      <h2>
+        Built to make the research workflow visible.
+      </h2>
+
+      <p>
+        A visual look at the workspace, research structure, project views,
+        signals and reporting environment inside Ripple Fable Research OS.
+      </p>
+
+      <div class="evidence-grid">
+
+        <figure class="evidence-card">
+  <a
+    class="evidence-card-link"
+    href="/research-os/dashboard.png"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="/research-os/dashboard.png"
+      alt="Ripple Fable Research OS dashboard"
+      loading="lazy"
+    />
+  </a>
+  
+  <figcaption>
+            <span>01</span>
+            <div>
+              <strong>Dashboard</strong>
+              <p>A central view of the research workspace and active projects.</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="evidence-card">
+  <a
+    class="evidence-card-link"
+    href="/research-os/overview.png"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="/research-os/overview.png"
+      alt="Ripple Fable Research OS overview"
+      loading="lazy"
+    />
+  </a>
+
+  <figcaption>
+    <span>02</span>
+    <div>
+      <strong>Research overview</strong>
+      <p>See the state of a research project from one structured view.</p>
+    </div>
+  </figcaption>
+</figure>
+
+        <figure class="evidence-card">
+  <a
+    class="evidence-card-link"
+    href="/research-os/workspace.png"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="/research-os/workspace.png"
+      alt="Ripple Fable Research OS research workspace"
+      loading="lazy"
+    />
+  </a>
+
+  <figcaption>
+    <span>03</span>
+    <div>
+      <strong>Research workspace</strong>
+      <p>Organise research work without losing the surrounding context.</p>
+    </div>
+  </figcaption>
+</figure>
+
+        <figure class="evidence-card">
+  <a
+    class="evidence-card-link"
+    href="/research-os/projects-dark.png"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="/research-os/projects-dark.png"
+      alt="Ripple Fable Research OS projects view"
+      loading="lazy"
+    />
+  </a>
+
+  <figcaption>
+    <span>04</span>
+    <div>
+      <strong>Projects</strong>
+      <p>Keep research initiatives separated into dedicated projects.</p>
+    </div>
+  </figcaption>
+</figure>
+
+        <figure class="evidence-card">
+  <a
+    class="evidence-card-link"
+    href="/research-os/signals.png"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="/research-os/signals.png"
+      alt="Ripple Fable Research OS signals view"
+      loading="lazy"
+    />
+  </a>
+
+  <figcaption>
+    <span>05</span>
+    <div>
+      <strong>Signals</strong>
+      <p>Capture market, audience and competitive signals worth investigating.</p>
+    </div>
+  </figcaption>
+</figure>
+
+        <figure class="evidence-card">
+  <a
+    class="evidence-card-link"
+    href="/research-os/library.png"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="/research-os/library.png"
+      alt="Ripple Fable Research OS library"
+      loading="lazy"
+    />
+  </a>
+
+  <figcaption>
+    <span>06</span>
+    <div>
+      <strong>Library</strong>
+      <p>Keep reusable research resources, frameworks and prompts accessible.</p>
+    </div>
+  </figcaption>
+</figure>
+
+        <figure class="evidence-card">
+  <a
+    class="evidence-card-link"
+    href="/research-os/reports.png"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src="/research-os/reports.png"
+      alt="Ripple Fable Research OS reports"
+      loading="lazy"
+    />
+  </a>
+
+  <figcaption>
+    <span>07</span>
+    <div>
+      <strong>Reports</strong>
+      <p>Turn research work into structured strategic deliverables.</p>
+    </div>
+  </figcaption>
+</figure>
+
+            </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">08 / Built & shipped</div>
+
+      <h2>
+        From a research idea to a real Windows product.
+      </h2>
+
+      <p>
+        Ripple Fable Research OS was built, packaged and launched as a
+        commercial Windows application for marketers, strategists, agencies
+        and founders.
+      </p>
+
+      <div class="case-highlight">
+        This isn't a concept project. It is a working product designed,
+        built and prepared for real users.
+      </div>
+
+      <div class="product-actions">
+  <a
+    href="https://goodness-tetragon-080769.framer.app/"
+    target="_blank"
+    rel="noopener"
+    class="product-action product-action-primary"
+  >
+    Explore the product <span>↗</span>
+  </a>
+
+  <a
+    href="https://goodness-tetragon-080769.framer.app/"
+    target="_blank"
+    rel="noopener"
+    class="product-action product-action-secondary"
+  >
+    See product & tutorial <span>↗</span>
+  </a>
+</div>
+    </section>
+    
+  </div>
+) : isZepto ? (
+  <div class="case-study">
+    <section class="case-intro">
+      <div class="case-kicker">Self-Initiated Strategic Case Study</div>
+
+      <h2>
+        Beyond ten minutes — toward everyday urban convenience.
+      </h2>
+
+      <p>
+        A research-led strategic case study exploring how Zepto could move
+        beyond the 10-minute delivery promise and own a more relevant form of
+        urban convenience. This is an independent strategic exercise, developed
+        to demonstrate the thinking required to take a category brief from
+        research through to a campaign platform.
+      </p>
+    </section>
+
+    <div class="case-meta">
+      <div>
+        <div class="case-meta-label">Project type</div>
+        <div class="case-meta-value">
+          Strategy / Campaign
+        </div>
+      </div>
+
+      <div>
+        <div class="case-meta-label">Role</div>
+        <div class="case-meta-value">
+          Marketing Strategist
+        </div>
+      </div>
+
+      <div>
+        <div class="case-meta-label">Status</div>
+        <div class="case-meta-value">
+          Independent strategic concept
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="case-section-label">01 / Context</div>
+
+      <h2>
+        From quick commerce to everyday urban convenience.
+      </h2>
+
+      <p>
+        The strategic context begins with a limitation: a promise built around
+        speed — the 10-minute delivery claim — can only describe a functional
+        benefit. As quick commerce normalises across Indian cities, delivery
+        windows shrink from a differentiator into a table stake.
+      </p>
+
+      <p>
+        The opportunity is to look beyond the functional promise and ask a more
+        human question: what does convenience genuinely mean in the rhythm of
+        an urban life? Moving the brand from being the fastest way to get
+        something, to being the least trouble way to live the day.
+      </p>
+
+      <div class="case-highlight">
+        Speed answers "how fast." Convenience answers "how easy."
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">02 / Market & consumer research</div>
+
+      <h2>
+        The category had already moved beyond emergency shopping.
+      </h2>
+
+      <p>
+        The research foundation starts from the observation that rapid-delivery
+        platforms were initially framed around emergencies — running out of
+        something at the wrong moment. In practice, category behaviour has
+        moved toward the everyday: small replenishments, missing ingredients, a
+        single item that never seemed worth a full trip.
+      </p>
+
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-card-number">Behaviour</div>
+          <h3>Category behaviour</h3>
+          <p>Frequent, small, low-stakes orders rather than planned shops.</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">Expectation</div>
+          <h3>Consumer expectations</h3>
+          <p>Speed is expected; effortlessness is what people feel.</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">Friction</div>
+          <h3>Urban friction</h3>
+          <p>Friction of leaving home for one small thing.</p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">Meaning</div>
+          <h3>Convenience</h3>
+          <p>Convenience felt as fewer errands, not shorter timers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">03 / Competitive audit</div>
+
+      <h2>
+        The category was competing on familiar convenience cues.
+      </h2>
+
+      <p>
+        Competitive positioning and creative communication were reviewed to
+        identify common category territory. The audit looked at the shared
+        language and imagery the category relies on — speed, quick delivery
+        windows, urgency-driven cues — to surface where the category was
+        already speaking in the same voice.
+      </p>
+
+      <div class="case-highlight">
+        If everyone owns "fast," then fast stops being a position.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">04 / The strategic tension</div>
+
+      <h2>
+        Small need. Disproportionate journey.
+      </h2>
+
+      <p>
+        This is the central strategic tension of the case study. The need being
+        served is genuinely small — an ingredient, a charger, a snack, one
+        item — yet satisfying it asks for a disproportionately large effort:
+        getting ready, leaving, walking, waiting, returning.
+      </p>
+
+      <div class="case-framework">
+        <div class="case-framework-flow">
+          <span>Tiny need</span>
+          <span class="case-arrow">vs</span>
+          <span>Unnecessary effort</span>
+        </div>
+      </div>
+
+      <div class="case-highlight">
+        The moment worth owning: the small gap between a need and the effort it
+        demands.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">05 / Strategic re-frame</div>
+
+      <h2>
+        From laziness to unnecessary effort.
+      </h2>
+
+      <p>
+        The re-frame resists moralising the consumer. The audience is not lazy;
+        they are reasonable people making reasonable decisions about how to
+        spend energy they do not have. The opportunity is to recognise the
+        unnecessary effort hidden in everyday urban life — the outing that was
+        never worth the trip.
+      </p>
+
+      <div class="case-highlight">
+        Protect their time, not their indulgence.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">06 / The big idea</div>
+
+      <h2>
+        Not Worth The Trip.
+      </h2>
+
+      <p>
+        This is the central campaign platform. The idea is built around
+        situations where the thing someone needs is simply not worth leaving
+        home for. It re-frames Zepto as relief from unnecessary effort rather
+        than just a fast delivery service.
+      </p>
+
+      <div class="case-highlight">
+        Not Worth The Trip — the moment you realise leaving is the hard part.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">07 / Creative system</div>
+
+      <h2>
+        Turn small frustrations into recognisable moments.
+      </h2>
+
+      <p>
+        Rather than a one-off advertisement, the platform is expressed as a
+        repeatable creative system. Because it is built from situations, it can
+        generate multiple lines of idea rather than a single execution.
+      </p>
+
+      <div class="case-framework">
+        <div class="case-framework-flow">
+          <span>Tiny need</span>
+          <span class="case-arrow">+</span>
+          <span>Urban friction</span>
+          <span class="case-arrow">=</span>
+          <span>Not Worth The Trip</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">08 / Local execution</div>
+
+      <h2>
+        Make the idea feel native to the city.
+      </h2>
+
+      <p>
+        The platform is designed to localise so that it feels borrowed, not
+        transplanted. Each market re-expresses "Not Worth The Trip" in the
+        texture of its own city and its own everyday frustrations.
+      </p>
+
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-card-number">01</div>
+          <h3>Mumbai / Marathi</h3>
+          <p>
+            Local execution expressed through familiar Mumbai daily journeys
+            and Marathi-language recognisable moments.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <div class="case-card-number">02</div>
+          <h3>Delhi-NCR / Hindi</h3>
+          <p>
+            Local execution expressed through Delhi-NCR daily friction and
+            Hindi-language recognisable moments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">09 / Activation</div>
+
+      <h2>
+        Turn everyday frustrations into participation.
+      </h2>
+
+      <p>
+        The proposed activation invites real customers to share their own
+        "not worth the trip" frustrations and stories, turning the platform
+        from a message into participation. This is a proposed strategic
+        activation concept, not a campaign that has run.
+      </p>
+
+      <div class="case-disclaimer">
+        Framed as a proposed strategic activation. It has not been executed,
+        and no performance results are claimed.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">10 / Measurement</div>
+
+      <h2>
+        Measure the response, not just the reach.
+      </h2>
+
+      <p>
+        Proposed measurement dimensions focus on whether the idea changes
+        behaviour — not only how many people saw it. These are proposed
+        dimensions rather than reported results.
+      </p>
+
+      <div class="case-framework">
+        <div class="case-framework-flow">
+          <span>Attention</span>
+          <span class="case-arrow">→</span>
+          <span>Response</span>
+          <span class="case-arrow">→</span>
+          <span>Action</span>
+        </div>
+      </div>
+
+      <div class="case-disclaimer">
+        Proposed measurement framework only. No campaign was run and no figures
+        are reported.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">11 / From evidence to idea</div>
+
+      <h2>
+        From research to a campaign platform.
+      </h2>
+
+      <div class="case-framework">
+        <div class="case-framework-flow">
+          <span>Research</span>
+          <span class="case-arrow">→</span>
+          <span>Audit</span>
+          <span class="case-arrow">→</span>
+          <span>Tension</span>
+          <span class="case-arrow">→</span>
+          <span>Campaign</span>
+          <span class="case-arrow">→</span>
+          <span>Local execution</span>
+        </div>
+      </div>
+
+      <p>
+        The strategic synthesis connects the whole path in one line: category
+        research reveals everyday need, competitive audit finds familiar
+        territory, a discovered tension delivers the re-frame, and a campaign
+        platform turns it into one simple recognisable idea.
+      </p>
+
+      <div class="case-highlight">
+        Research → Audit → Tension → Campaign → Local execution
+      </div>
+
+      <div class="case-disclaimer">
+        Independent, self-initiated strategic case study. Not commissioned,
+        approved or launched by Zepto. No campaign ran and no business results
+        are claimed. This work is presented to demonstrate strategic thinking.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">FULL RESEARCH DECK</div>
+
+      <h2>Read the complete investigation.</h2>
+
+      <p>
+        The complete 17-slide independent research deck behind this strategic
+        case study — covering the market context, consumer research, competitive
+        landscape, strategic tension, re-frame, creative system, localisation,
+        activation and measurement considerations in full.
+      </p>
+
+      <a
+        class="case-pdf"
+        href="/projects/zepto/not-worth-the-trip-zepto.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        View the full PDF research deck →
+      </a>
+
+      <div class="case-disclaimer">
+        This is the complete 17-slide independent research deck for the
+        self-initiated Not Worth The Trip case study. It is not commissioned,
+        approved or launched by Zepto.
+      </div>
+    </section>
+
+  </div>
+) : (
+  <div class="sections">
+    <div class="detail-section">
+      <div class="detail-label">Context</div>
+      <p class="detail-note">Details to be curated for this project.</p>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-label">The problem</div>
+      <p class="detail-note">Details to be curated for this project.</p>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-label">Objective</div>
+      <p class="detail-note">Details to be curated for this project.</p>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-label">Research / approach</div>
+      <p class="detail-note">Details to be curated for this project.</p>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-label">Key findings</div>
+      <p class="detail-note">Details to be curated for this project.</p>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-label">Strategic thinking</div>
+      <p class="detail-note">Details to be curated for this project.</p>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-label">Solution / system / execution</div>
+      <p class="detail-note">Details to be curated for this project.</p>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-label">Outcome or learning</div>
+      <p class="detail-note">Details to be curated for this project.</p>
+    </div>
+  </div>
+)}
 
         <div class="facts">
           <div>
@@ -381,15 +1919,306 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
           </div>
         </div>
 
+{isDermabay && (
         <div class="evidence">
-          <h2>Evidence & screenshots</h2>
-          <p>Visual assets and supporting material for this project will be added here.</p>
-          <div class="evidence-grid">
-            <div class="evidence-slot">Screenshot</div>
-            <div class="evidence-slot">Screenshot</div>
-            <div class="evidence-slot">Screenshot</div>
-          </div>
+  <div class="section-label">EVIDENCE & RESEARCH MATERIAL</div>
+
+  <h2>Selected evidence from the investigation.</h2>
+
+  <p class="evidence-intro">
+    A visual selection from the research, competitive analysis, strategic
+    framework and proposed experimentation behind this project.
+  </p>
+
+  <div class="evidence-grid">
+
+    <figure class="evidence-card">
+      <img
+        src="/projects/dermabay/evidence/01-research-methodology.png"
+        alt="Dermabay strategic research methodology"
+        loading="lazy"
+      />
+      <figcaption>
+        <span>01</span>
+        <div>
+          <strong>Research methodology</strong>
+          <p>Six-angle investigation and evidence synthesis.</p>
         </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <img
+        src="/projects/dermabay/evidence/02-customer-research.png"
+        alt="Dermabay customer research and customer language analysis"
+        loading="lazy"
+      />
+      <figcaption>
+        <span>02</span>
+        <div>
+          <strong>Customer research</strong>
+          <p>Customer evidence, reviews and purchase-language analysis.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <img
+        src="/projects/dermabay/evidence/03-competitive-intelligence.png"
+        alt="Dermabay competitive landscape analysis"
+        loading="lazy"
+      />
+      <figcaption>
+        <span>03</span>
+        <div>
+          <strong>Competitive intelligence</strong>
+          <p>Category evidence and competitor positioning territories.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <img
+        src="/projects/dermabay/evidence/04-strategic-gap.png"
+        alt="Dermabay strategic gap and proof-backed choice framework"
+        loading="lazy"
+      />
+      <figcaption>
+        <span>04</span>
+        <div>
+          <strong>Strategic gap</strong>
+          <p>From feature-led claims to proof-backed choice.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <img
+        src="/projects/dermabay/evidence/05-content-system.png"
+        alt="Dermabay problem-to-proof content system"
+        loading="lazy"
+      />
+      <figcaption>
+        <span>05</span>
+        <div>
+          <strong>Content system</strong>
+          <p>Problem-to-proof architecture across the customer journey.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <img
+        src="/projects/dermabay/evidence/06-experiment-design.png"
+        alt="Dermabay proposed A/B test and measurement design"
+        loading="lazy"
+      />
+      <figcaption>
+        <span>06</span>
+        <div>
+          <strong>Experiment design</strong>
+          <p>Control vs. variant testing and proposed measurement signals.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+  </div>
+</div>
+)}
+
+{isZepto && (
+        <div class="evidence">
+  <div class="section-label">EVIDENCE & RESEARCH MATERIAL</div>
+
+  <h2>From research to a campaign platform.</h2>
+
+  <p class="evidence-intro">
+    A visual walkthrough of the strategic process — from market reset and
+    consumer research, through the tension and re-frame, to the creative system
+    and the final strategic synthesis.
+  </p>
+
+  <div class="evidence-grid">
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/zepto/evidence/01-market-reset.png"
+        data-caption="01 — Market reset. Category and market context."
+      >
+        <img
+          src="/projects/zepto/evidence/01-market-reset.png"
+          alt="Market reset — category and market context"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>01</span>
+        <div>
+          <strong>Market reset</strong>
+          <p>Category and market context.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/zepto/evidence/02-consumer-research.png"
+        data-caption="02 — Consumer research. Consumer behaviour and urban friction signals."
+      >
+        <img
+          src="/projects/zepto/evidence/02-consumer-research.png"
+          alt="Consumer research — consumer behaviour and urban friction signals"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>02</span>
+        <div>
+          <strong>Consumer research</strong>
+          <p>Consumer behaviour and urban friction signals.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/zepto/evidence/03-competitive-landscape.png"
+        data-caption="03 — Competitive landscape. Category positioning and creative territory."
+      >
+        <img
+          src="/projects/zepto/evidence/03-competitive-landscape.png"
+          alt="Competitive landscape — category positioning and creative territory"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>03</span>
+        <div>
+          <strong>Competitive landscape</strong>
+          <p>Category positioning and creative territory.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/zepto/evidence/04-disproportionate-journey.png"
+        data-caption="04 — Disproportionate journey. The strategic consumer tension."
+      >
+        <img
+          src="/projects/zepto/evidence/04-disproportionate-journey.png"
+          alt="Disproportionate journey — the strategic consumer tension"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>04</span>
+        <div>
+          <strong>Disproportionate journey</strong>
+          <p>The strategic consumer tension.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/zepto/evidence/05-strategic-reframe.png"
+        data-caption="05 — Strategic re-frame. From laziness to unnecessary effort."
+      >
+        <img
+          src="/projects/zepto/evidence/05-strategic-reframe.png"
+          alt="Strategic re-frame — from laziness to unnecessary effort"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>05</span>
+        <div>
+          <strong>Strategic re-frame</strong>
+          <p>From laziness to unnecessary effort.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/zepto/evidence/06-big-idea.png"
+        data-caption="06 — Big idea. Not Worth The Trip."
+      >
+        <img
+          src="/projects/zepto/evidence/06-big-idea.png"
+          alt="Big idea — Not Worth The Trip"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>06</span>
+        <div>
+          <strong>Big idea</strong>
+          <p>Not Worth The Trip.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/zepto/evidence/07-creative-system.png"
+        data-caption="07 — Creative system. A repeatable creative formula built around tiny needs and urban friction."
+      >
+        <img
+          src="/projects/zepto/evidence/07-creative-system.png"
+          alt="Creative system — a repeatable creative formula built around tiny needs and urban friction"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>07</span>
+        <div>
+          <strong>Creative system</strong>
+          <p>A repeatable formula built around tiny needs and urban friction.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/zepto/evidence/08-evidence-to-idea.png"
+        data-caption="08 — Evidence to idea. The strategic path from research to campaign platform."
+      >
+        <img
+          src="/projects/zepto/evidence/08-evidence-to-idea.png"
+          alt="Evidence to idea — the strategic path from research to campaign platform"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>08</span>
+        <div>
+          <strong>Evidence to idea</strong>
+          <p>The strategic path from research to campaign platform.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Evidence image preview">
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <figure class="lightbox-figure">
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    </div>
+</div>
+)}
 
         <div class="nav-projects">
           {prevProject && (
@@ -411,5 +2240,43 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
         </div>
       </div>
     </main>
+  <script>
+      (function () {
+        var lb = document.getElementById("lightbox");
+        if (!lb) return;
+        var lbImg = lb.querySelector("img");
+        var lbCap = lb.querySelector(".lightbox-figure figcaption");
+        var lbClose = lb.querySelector(".lightbox-close");
+        var triggers = document.querySelectorAll(".evidence-trigger");
+
+        function open(src, alt, caption) {
+          lbImg.src = src;
+          lbImg.alt = alt || "";
+          if (lbCap) lbCap.textContent = caption || "";
+          lb.classList.add("open");
+          document.body.style.overflow = "hidden";
+        }
+        function close() {
+          lb.classList.remove("open");
+          document.body.style.overflow = "";
+        }
+
+        triggers.forEach(function (a) {
+          a.addEventListener("click", function (e) {
+            e.preventDefault();
+            var img = a.querySelector("img");
+            open(a.getAttribute("href"), img ? img.getAttribute("alt") : "", a.getAttribute("data-caption"));
+          });
+        });
+
+        if (lbClose) lbClose.addEventListener("click", close);
+        lb.addEventListener("click", function (e) {
+          if (e.target === lb) close();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") close();
+        });
+      })();
+    </script>
   </body>
 </html>

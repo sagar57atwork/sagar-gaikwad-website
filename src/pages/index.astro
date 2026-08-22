@@ -4,6 +4,25 @@ const SITE = "https://sagar-gaikwad-website.pages.dev";
 const work = [
   {
     number: "01",
+    slug: "dermabay-proof-gap",
+    type: "STRATEGIC PROJECT",
+    title: "Dermabay — The Proof Gap",
+    text: "An independent strategic growth investigation into how science-backed credibility can become a more distinctive reason to choose.",
+    tags: ["Research", "Strategy", "Consumer Insight", "Growth"],
+    featured: true,
+  },
+  {
+    number: "02",
+    slug: "not-worth-the-trip-zepto",
+    type: "STRATEGY / CAMPAIGN",
+    title: "Not Worth The Trip",
+    text: "An independent strategic campaign investigation exploring how a familiar travel friction can become a sharper consumer and brand insight.",
+    tags: ["Research", "Strategy", "Consumer Insight", "Campaign"],
+    featured: true,
+  },
+  {
+    number: "03",
+    slug: "ripple-fable-research-os",
     type: "PRODUCT / SYSTEM",
     title: "Ripple Fable Research OS",
     text: "A Windows-based marketing research workspace designed to turn scattered research into structured evidence, insights and strategy.",
@@ -11,7 +30,8 @@ const work = [
     featured: true,
   },
   {
-    number: "02",
+    number: "04",
+    slug: "retention-engine",
     type: "AGENCY SYSTEM",
     title: "Retention Engine",
     text: "A Notion operating system for managing clients, projects, retention, strategy, analytics and delivery.",
@@ -19,35 +39,12 @@ const work = [
     featured: true,
   },
   {
-    number: "03",
-    type: "STRATEGIC PROJECT",
-    title: "Competitive Intelligence Report",
-    text: "A structured competitive research system for understanding market positioning, competitors and strategic opportunities.",
-    tags: ["Local SEO", "Research", "Acquisition"],
-    featured: false,
-  },
-  {
-    number: "04",
+    number: "05",
+    slug: "local-search-growth",
     type: "PRACTICE CASE STUDY",
     title: "Local Search Growth",
     text: "A research-led approach to Google Business Profile, local SEO and customer acquisition for local businesses.",
     tags: ["Positioning", "Growth"],
-    featured: false,
-  },
-  {
-    number: "05",
-    type: "PRACTICE CASE STUDY",
-    title: "Luma Living",
-    text: "A brand launch and go-to-market strategy exploring positioning, audience and growth direction.",
-    tags: ["Brand", "GTM", "Strategy"],
-    featured: false,
-  },
-  {
-    number: "06",
-    type: "PRACTICE CASE STUDY",
-    title: "Harvest & Hearth",
-    text: "A strategic exploration of digital positioning, content and growth opportunities for a restaurant brand.",
-    tags: ["Strategy", "Content", "Growth"],
     featured: false,
   },
 ];
@@ -1172,7 +1169,7 @@ const slugify = (value) =>
 
           <div class="work-list">
             {work.map((item) => (
-              <a href={`/work/${slugify(item.title)}`} class="work-item">
+              <a href={`/work/${item.slug}`} class="work-item">
 
                 <div class="work-number">
                   {item.number}
