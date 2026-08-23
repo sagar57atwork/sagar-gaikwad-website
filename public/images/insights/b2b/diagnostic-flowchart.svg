@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1400" width="100%" height="100%" style="background:#F9F8F6; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <style>
+      .label-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
+      .text-title { font-size: 26px; font-weight: 700; fill: #18181B; }
+      .text-sub { font-size: 14px; font-weight: 400; fill: #71717A; }
+      .text-node-title { font-size: 15px; font-weight: 600; fill: #18181B; }
+      .text-node-desc { font-size: 13px; font-weight: 400; fill: #52525B; }
+      .border-line { stroke: #E4E4E7; stroke-width: 1; fill: none; }
+      .accent-line { stroke: #C2410C; stroke-width: 1.5; fill: none; }
+      .node-bg { fill: #FFFFFF; stroke: #E4E4E7; stroke-width: 1; }
+      .evidence-bg { fill: #FFF7ED; stroke: #EA580C; stroke-width: 1.5; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#A1A1AA" />
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#C2410C" />
+    </marker>
+  </defs>
+
+  <!-- HEADER -->
+  <g transform="translate(80, 70)">
+    <text class="label-mono" fill="#C2410C" x="0" y="0">System Audit Logic</text>
+    <text class="text-title" x="0" y="32">The Lead-Gen Diagnostic Flowchart</text>
+    <text class="text-sub" x="0" y="58">Never act on symptoms alone. Evidence dictates the fork.</text>
+    <line x1="0" y1="85" x2="1440" y2="85" class="border-line" />
+  </g>
+
+  <!-- TRACK 1 -->
+  <g transform="translate(80, 200)">
+    <rect x="0" y="0" width="1440" height="250" rx="4" fill="#FAFAF9" stroke="#E4E4E7" stroke-width="1"/>
+    <text class="label-mono" fill="#A1A1AA" x="24" y="30">Track 01 / Traffic vs Conversion</text>
+
+    <!-- Symptom -->
+    <rect x="24" y="50" width="260" height="170" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#71717A" x="44" y="80">Symptom</text>
+    <text class="text-node-title" x="44" y="110">High Traffic,</text>
+    <text class="text-node-title" x="44" y="130">Low Leads</text>
+    <text class="text-node-desc" x="44" y="165">Volume is high, but no</text>
+    <text class="text-node-desc" x="44" y="185">forms or demos submit.</text>
+
+    <!-- Connector 1 -->
+    <line x1="284" y1="135" x2="338" y2="135" class="border-line" marker-end="url(#arrow)" />
+
+    <!-- Evidence Node -->
+    <rect x="344" y="50" width="300" height="170" rx="3" class="evidence-bg"/>
+    <text class="label-mono" fill="#C2410C" x="368" y="80">Inspect Evidence (Fork)</text>
+    <text class="text-node-title" x="368" y="110">Search Intent vs.</text>
+    <text class="text-node-title" x="368" y="130">Form Abandonment</text>
+    <text class="text-node-desc" x="368" y="165">Compare bounce queries against</text>
+    <text class="text-node-desc" x="368" y="185">time-on-page &amp; field friction.</text>
+
+    <!-- Branch Lines -->
+    <path d="M 644 110 L 698 85" class="accent-line" marker-end="url(#arrow-accent)" />
+    <path d="M 644 160 L 698 185" class="accent-line" marker-end="url(#arrow-accent)" />
+
+    <!-- Branch A -->
+    <rect x="704" y="45" width="712" height="75" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#C2410C" x="724" y="72">Diagnosis A: Intent Mismatch</text>
+    <text class="text-node-desc" x="724" y="98">Traffic is strictly informational. → <tspan font-weight="600" fill="#18181B">Action: Pivot SEO to commercial buyer intent.</tspan></text>
+
+    <!-- Branch B -->
+    <rect x="704" y="145" width="712" height="75" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#71717A" x="724" y="172">Diagnosis B: UX Friction</text>
+    <text class="text-node-desc" x="724" y="198">High intent, but form breaks conversion. → <tspan font-weight="600" fill="#18181B">Action: Streamline form fields &amp; remove friction.</tspan></text>
+  </g>
+
+  <!-- TRACK 2 -->
+  <g transform="translate(80, 480)">
+    <rect x="0" y="0" width="1440" height="250" rx="4" fill="#FAFAF9" stroke="#E4E4E7" stroke-width="1"/>
+    <text class="label-mono" fill="#A1A1AA" x="24" y="30">Track 02 / Volume vs Qualification</text>
+
+    <!-- Symptom -->
+    <rect x="24" y="50" width="260" height="170" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#71717A" x="44" y="80">Symptom</text>
+    <text class="text-node-title" x="44" y="110">High Lead Volume,</text>
+    <text class="text-node-title" x="44" y="130">Few Qualified Ops</text>
+    <text class="text-node-desc" x="44" y="165">Marketing hits targets;</text>
+    <text class="text-node-desc" x="44" y="185">sales pipeline is flat.</text>
+
+    <!-- Connector 1 -->
+    <line x1="284" y1="135" x2="338" y2="135" class="border-line" marker-end="url(#arrow)" />
+
+    <!-- Evidence Node -->
+    <rect x="344" y="50" width="300" height="170" rx="3" class="evidence-bg"/>
+    <text class="label-mono" fill="#C2410C" x="368" y="80">Inspect Evidence (Fork)</text>
+    <text class="text-node-title" x="368" y="110">Job Seniority vs.</text>
+    <text class="text-node-title" x="368" y="130">Lead Sourcing Asset</text>
+    <text class="text-node-desc" x="368" y="165">Compare lead titles with whether</text>
+    <text class="text-node-desc" x="368" y="185">they converted on TOFU or demo.</text>
+
+    <!-- Branch Lines -->
+    <path d="M 644 110 L 698 85" class="accent-line" marker-end="url(#arrow-accent)" />
+    <path d="M 644 160 L 698 185" class="accent-line" marker-end="url(#arrow-accent)" />
+
+    <!-- Branch A -->
+    <rect x="704" y="45" width="712" height="75" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#C2410C" x="724" y="72">Diagnosis A: Out-Market Trap</text>
+    <text class="text-node-desc" x="724" y="98">Capturing 95% non-buyers on TOFU assets. → <tspan font-weight="600" fill="#18181B">Action: Stop routing educational downloads to Sales.</tspan></text>
+
+    <!-- Branch B -->
+    <rect x="704" y="145" width="712" height="75" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#71717A" x="724" y="172">Diagnosis B: Qualification Deficit</text>
+    <text class="text-node-desc" x="724" y="198">Ads are too broad; forms lack friction. → <tspan font-weight="600" fill="#18181B">Action: Add ICP filter questions to inbound forms.</tspan></text>
+  </g>
+
+  <!-- TRACK 3 -->
+  <g transform="translate(80, 760)">
+    <rect x="0" y="0" width="1440" height="250" rx="4" fill="#FAFAF9" stroke="#E4E4E7" stroke-width="1"/>
+    <text class="label-mono" fill="#A1A1AA" x="24" y="30">Track 03 / Marketing-Sales Handoff</text>
+
+    <!-- Symptom -->
+    <rect x="24" y="50" width="260" height="170" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#71717A" x="44" y="80">Symptom</text>
+    <text class="text-node-title" x="44" y="110">Good MQL Volume,</text>
+    <text class="text-node-title" x="44" y="130">Sales Rejection</text>
+    <text class="text-node-desc" x="44" y="165">Marketing qualifies leads;</text>
+    <text class="text-node-desc" x="44" y="185">Sales refuses or ignores them.</text>
+
+    <!-- Connector 1 -->
+    <line x1="284" y1="135" x2="338" y2="135" class="border-line" marker-end="url(#arrow)" />
+
+    <!-- Evidence Node -->
+    <rect x="344" y="50" width="300" height="170" rx="3" class="evidence-bg"/>
+    <text class="label-mono" fill="#C2410C" x="368" y="80">Inspect Evidence (Fork)</text>
+    <text class="text-node-title" x="368" y="110">CRM Rejection Notes vs.</text>
+    <text class="text-node-title" x="368" y="130">SDR Response Speed</text>
+    <text class="text-node-desc" x="368" y="165">Inspect exact sales call notes vs</text>
+    <text class="text-node-desc" x="368" y="185">time-to-first-touch timestamps.</text>
+
+    <!-- Branch Lines -->
+    <path d="M 644 110 L 698 85" class="accent-line" marker-end="url(#arrow-accent)" />
+    <path d="M 644 160 L 698 185" class="accent-line" marker-end="url(#arrow-accent)" />
+
+    <!-- Branch A -->
+    <rect x="704" y="45" width="712" height="75" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#C2410C" x="724" y="72">Diagnosis A: Definition Mismatch</text>
+    <text class="text-node-desc" x="724" y="98">Prospects say: "I never asked for a call." → <tspan font-weight="600" fill="#18181B">Action: Co-define MQL criteria around active buying intent.</tspan></text>
+
+    <!-- Branch B -->
+    <rect x="704" y="145" width="712" height="75" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#71717A" x="724" y="172">Diagnosis B: Speed-to-Lead Failure</text>
+    <text class="text-node-desc" x="724" y="198">Prospects say: "Already chose a competitor." → <tspan font-weight="600" fill="#18181B">Action: Audit &amp; accelerate internal CRM routing speed.</tspan></text>
+  </g>
+
+  <!-- TRACK 4 -->
+  <g transform="translate(80, 1040)">
+    <rect x="0" y="0" width="1440" height="250" rx="4" fill="#FAFAF9" stroke="#E4E4E7" stroke-width="1"/>
+    <text class="label-mono" fill="#A1A1AA" x="24" y="30">Track 04 / Pipeline Velocity</text>
+
+    <!-- Symptom -->
+    <rect x="24" y="50" width="260" height="170" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#71717A" x="44" y="80">Symptom</text>
+    <text class="text-node-title" x="44" y="110">Good SQL Volume,</text>
+    <text class="text-node-title" x="44" y="130">Stagnant Pipeline</text>
+    <text class="text-node-desc" x="44" y="165">Discovery calls go well,</text>
+    <text class="text-node-desc" x="44" y="185">then prospects go dark.</text>
+
+    <!-- Connector 1 -->
+    <line x1="284" y1="135" x2="338" y2="135" class="border-line" marker-end="url(#arrow)" />
+
+    <!-- Evidence Node -->
+    <rect x="344" y="50" width="300" height="170" rx="3" class="evidence-bg"/>
+    <text class="label-mono" fill="#C2410C" x="368" y="80">Inspect Evidence (Fork)</text>
+    <text class="text-node-title" x="368" y="110">Stage Dwell Time vs.</text>
+    <text class="text-node-title" x="368" y="130">Stakeholder Count</text>
+    <text class="text-node-desc" x="368" y="165">Analyze champion engagement vs</text>
+    <text class="text-node-desc" x="368" y="185">multi-threaded deal involvement.</text>
+
+    <!-- Branch Lines -->
+    <path d="M 644 110 L 698 85" class="accent-line" marker-end="url(#arrow-accent)" />
+    <path d="M 644 160 L 698 185" class="accent-line" marker-end="url(#arrow-accent)" />
+
+    <!-- Branch A -->
+    <rect x="704" y="45" width="712" height="75" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#C2410C" x="724" y="72">Diagnosis A: Consensus Bottleneck</text>
+    <text class="text-node-desc" x="724" y="98">Champion cannot convince buying committee. → <tspan font-weight="600" fill="#18181B">Action: Build ROI calculators &amp; CFO business decks.</tspan></text>
+
+    <!-- Branch B -->
+    <rect x="704" y="145" width="712" height="75" rx="3" class="node-bg"/>
+    <text class="label-mono" fill="#71717A" x="724" y="172">Diagnosis B: Weak Enablement</text>
+    <text class="text-node-desc" x="724" y="198">Prospect lacks collateral to build business case. → <tspan font-weight="600" fill="#18181B">Action: Deploy security &amp; technical battlecards.</tspan></text>
+  </g>
+</svg>

@@ -12,8 +12,7 @@ export function getStaticPaths() {
   tags: ["Research", "Strategy", "Consumer Insight", "Growth"],
 },
     { slug: "ripple-fable-research-os", type: "PRODUCT / SYSTEM", title: "Ripple Fable Research OS", summary: "A Windows-based marketing research workspace designed to turn scattered research into structured, usable analysis.", role: "Product / Research", tools: ["Windows App", "Research", "Strategy"], tags: ["Research", "AI", "Strategy"] },
-    { slug: "retention-engine", type: "AGENCY SYSTEM", title: "Retention Engine", summary: "A Notion operating system for managing clients, projects, retention, strategy, analytics and delivery.", role: "Agency Operations", tools: ["Notion", "Agency Ops", "Retention"], tags: ["Notion", "Agency Ops", "Retention"] },
-    { slug: "local-search-growth", type: "PRACTICE CASE STUDY", title: "Local Search Growth", summary: "A research-led approach to Google Business Profile, local SEO and customer acquisition for local businesses.", role: "Practice Case Study", tools: ["SEO", "Local Search"], tags: ["Positioning", "Growth"] },
+    { slug: "retention-engine", type: "Internal Operations System", title: "Retention Engine", summary: "A Notion operating system for managing clients, projects, retention, strategy, analytics and delivery.", role: "System Design & Workflow Architecture", tools: ["Notion"], tags: ["Notion", "Agency Ops", "Retention"] },
     { slug: "not-worth-the-trip-zepto", type: "STRATEGY / CAMPAIGN", title: "Not Worth The Trip", summary: "A research-led strategic case study exploring how Zepto could move beyond the 10-minute delivery promise and own a more relevant form of urban convenience.", role: "Marketing Strategist", tools: ["Research", "Consumer Research", "Competitive Analysis", "Strategic Positioning", "Consumer Insight", "Campaign Strategy", "Creative Strategy", "Localisation", "Content Strategy", "Measurement Strategy"], tags: ["Research", "Strategy", "Consumer Insight", "Campaign"] },
   ];
   return projects.map((project, index) => ({
@@ -32,6 +31,7 @@ const isPractice = /practice|concept/i.test(type);
 const isDermabay = project.slug === "dermabay-proof-gap";
 const isResearchOS = project.slug === "ripple-fable-research-os";
 const isZepto = project.slug === "not-worth-the-trip-zepto";
+const isRetention = project.slug === "retention-engine";
 
 const prevProject = index > 0 ? projectsList[index - 1] : null;
 const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : null;
@@ -663,6 +663,14 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
     padding-top: 60px;
   }
 }
+
+    .retention-hero { margin: 50px 0 0; }
+    .retention-hero img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
+    .retention-hero figcaption { display: flex; gap: 16px; margin-top: 14px; color: var(--muted); font-size: 14px; }
+    .retention-hero figcaption span { color: var(--orange); font-weight: 650; }
+    .retention-hero figcaption strong { color: var(--ink); }
+    .retention-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 800px) { .retention-grid { grid-template-columns: 1fr; } }
 
     /* Zepto evidence lightbox */
       .evidence-trigger {
@@ -1858,7 +1866,7 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
     </section>
 
   </div>
-) : (
+) : isRetention ? null : (
   <div class="sections">
     <div class="detail-section">
       <div class="detail-label">Context</div>
@@ -1899,7 +1907,344 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
       <div class="detail-label">Outcome or learning</div>
       <p class="detail-note">Details to be curated for this project.</p>
     </div>
+
+    <section class="case-section">
+      <div class="case-section-label">08 / Outcome / Learning</div>
+
+      <h2>Outcome / Learning</h2>
+
+      <p>
+        The main outcome was a reusable operational framework for managing
+        the moving parts of agency work from one connected workspace.
+      </p>
+
+      <p>
+        The project reinforced a broader design principle: good operational
+        systems should reduce the need to search for context. Information
+        should surface where the next decision is being made.
+      </p>
+
+      <p>
+        Retention Engine therefore functions less like a collection of Notion
+        templates and more like an operating layer for recurring agency work.
+      </p>
+    </section>
   </div>
+)}
+
+{isRetention && (
+  <div class="case-study">
+    <section class="case-intro">
+      <div class="case-kicker">Agency Operations & Client Retention OS</div>
+
+      <h2>
+        One workspace for running the agency.
+      </h2>
+
+      <p>
+        Retention Engine is a Notion operating system for managing clients,
+        projects, content production, profitability, reporting and delivery —
+        organised so the day-to-day of agency work lives in one place.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">01 / Context</div>
+
+      <h2>Context</h2>
+
+      <p>
+        Agency work often gets fragmented across project boards, client
+        databases, content calendars, reporting documents and financial
+        trackers. Retention Engine was designed as a single operating layer
+        that connects these moving parts into one workspace.
+      </p>
+
+      <p>
+        The system brings client relationships, project delivery, content
+        production, performance tracking and financial visibility into a
+        connected operational structure.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">02 / The problem</div>
+
+      <h2>The problem</h2>
+
+      <p>
+        As an agency grows, operational information tends to spread across
+        disconnected tools and views. Projects live separately from client
+        context, content production from delivery, and financial tracking
+        from day-to-day execution.
+      </p>
+
+      <p>
+        The result is more manual coordination, less visibility and a higher
+        risk of losing important context between teams, projects and clients.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">03 / Objective</div>
+
+      <h2>Objective</h2>
+
+      <p>
+        The objective was to create one operating system that could give an
+        agency a clear view of what is happening, who owns it, which client
+        or project it belongs to, and how delivery connects to business
+        performance.
+      </p>
+
+      <p>
+        The system needed to support both daily execution and higher-level
+        operational visibility without turning the workspace into a
+        collection of disconnected databases.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">04 / Research / Approach</div>
+
+      <h2>Research / Approach</h2>
+
+      <p>
+        I mapped the recurring operational layers of agency work and
+        organized them into connected workspaces rather than isolated
+        trackers.
+      </p>
+
+      <p>
+        The system was structured around five core areas: pipeline and
+        projects, client management, content production, strategy and
+        analytics, with database relationships connecting the operational
+        layer underneath.
+      </p>
+
+      <p>
+        Each workspace was designed around a specific decision or workflow
+        rather than simply storing information.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">05 / Key findings</div>
+
+      <h2>Key findings</h2>
+
+      <p>
+        The system revealed that the main operational challenge is not the
+        absence of information, but the separation of information.
+      </p>
+
+      <p>
+        Client context influences projects. Projects generate production
+        tasks. Production feeds reporting. Reporting informs strategy.
+        Financial tracking adds the business layer needed to understand
+        whether delivery is sustainable.
+      </p>
+
+      <p>
+        Connecting these relationships creates a more useful operational
+        picture than maintaining separate trackers for each function.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">06 / Strategic thinking</div>
+
+      <h2>Strategic thinking</h2>
+
+      <p>
+        The core design principle was to treat the agency as one connected
+        system rather than a collection of workflows.
+      </p>
+
+      <p>
+        Instead of creating a separate tool for every operational problem,
+        Retention Engine uses connected databases and purpose-built views to
+        surface the same underlying information from different perspectives.
+      </p>
+
+      <p>
+        This makes the system adaptable: the same project, client or task can
+        appear where it is operationally relevant without duplicating the
+        underlying data.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-label">07 / Solution / System / Execution</div>
+
+      <h2>Solution / System / Execution</h2>
+
+      <p>
+        Six connected workspaces form the operational layer of the system.
+      </p>
+    </section>
+
+    <figure class="retention-hero">
+      <a
+        class="evidence-trigger"
+        href="/images/work/retention-engine-dashboard.png"
+        data-caption="01 — Dashboard. The operational overview connecting the major areas of the system."
+      >
+        <img
+          src="/images/work/retention-engine-dashboard.png"
+          alt="Retention Engine dashboard showing an overview of clients, projects and agency operations"
+          loading="eager"
+        />
+      </a>
+      <figcaption>
+        <span>01</span>
+        <div>
+          <strong>Dashboard</strong>
+          <p>The operational overview connecting the major areas of the system.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <div class="evidence-grid retention-grid">
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/images/work/retention-engine-content-pipeline.png"
+        data-caption="02 — Content Production Pipeline. Content work tracked from planning and scripting through review and delivery."
+      >
+        <img
+          src="/images/work/retention-engine-content-pipeline.png"
+          alt="Content production pipeline board tracking content work through stages"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>02</span>
+        <div>
+          <strong>Content Production Pipeline</strong>
+          <p>Content work tracked from planning and scripting through review and delivery.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/images/work/retention-engine-client-command-center.png"
+        data-caption="03 — Client Command Center. A centralized view of client status, health and communication activity."
+      >
+        <img
+          src="/images/work/retention-engine-client-command-center.png"
+          alt="Client command center view consolidating each client's work in one place"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>03</span>
+        <div>
+          <strong>Client Command Center</strong>
+          <p>A centralized view of client status, health and communication activity.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/images/work/retention-engine-profit-calculator.png"
+        data-caption="04 — Profit & Expense Calculator. Revenue, operating costs, margins and financial targets in one view."
+      >
+        <img
+          src="/images/work/retention-engine-profit-calculator.png"
+          alt="Profit and expense calculator showing revenue, costs and margins"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>04</span>
+        <div>
+          <strong>Profit & Expense Calculator</strong>
+          <p>Revenue, operating costs, margins and financial targets in one view.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/images/work/retention-engine-monthly-report.png"
+        data-caption="05 — Client Monthly Report. A structured reporting interface for presenting client performance."
+      >
+        <img
+          src="/images/work/retention-engine-monthly-report.png"
+          alt="Client monthly report template with structured sections for reporting"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>05</span>
+        <div>
+          <strong>Client Monthly Report</strong>
+          <p>A structured reporting interface for presenting client performance.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/images/work/retention-engine-project-database.png"
+        data-caption="06 — Project Database. The underlying project layer connecting clients, tasks, deadlines and progress."
+      >
+        <img
+          src="/images/work/retention-engine-project-database.png"
+          alt="Project database listing agency projects in a structured table"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        <span>06</span>
+        <div>
+          <strong>Project Database</strong>
+          <p>The underlying project layer connecting clients, tasks, deadlines and progress.</p>
+        </div>
+      </figcaption>
+    </figure>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Evidence image preview">
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <figure class="lightbox-figure">
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    </div>
+
+    <section class="case-section">
+      <div class="case-section-label">08 / Outcome / Learning</div>
+
+      <h2>Outcome / Learning</h2>
+
+      <p>
+        The main outcome was a reusable operational framework for managing
+        the moving parts of agency work from one connected workspace.
+      </p>
+
+      <p>
+        The project reinforced a broader design principle: good operational
+        systems should reduce the need to search for context. Information
+        should surface where the next decision is being made.
+      </p>
+
+      <p>
+        Retention Engine therefore functions less like a collection of Notion
+        templates and more like an operating layer for recurring agency work.
+      </p>
+    </section>
+  </div>
+
 )}
 
         <div class="facts">
@@ -1933,11 +2278,17 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
   <div class="evidence-grid">
 
     <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/dermabay/evidence/01-research-methodology.png"
+        data-caption="01 — Research methodology. Six-angle investigation and evidence synthesis."
+      >
       <img
         src="/projects/dermabay/evidence/01-research-methodology.png"
         alt="Dermabay strategic research methodology"
         loading="lazy"
       />
+      </a>
       <figcaption>
         <span>01</span>
         <div>
@@ -1948,11 +2299,17 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
     </figure>
 
     <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/dermabay/evidence/02-customer-research.png"
+        data-caption="02 — Customer research. Customer evidence, reviews and purchase-language analysis."
+      >
       <img
         src="/projects/dermabay/evidence/02-customer-research.png"
         alt="Dermabay customer research and customer language analysis"
         loading="lazy"
       />
+      </a>
       <figcaption>
         <span>02</span>
         <div>
@@ -1963,11 +2320,17 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
     </figure>
 
     <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/dermabay/evidence/03-competitive-intelligence.png"
+        data-caption="03 — Competitive intelligence. Category evidence and competitor positioning territories."
+      >
       <img
         src="/projects/dermabay/evidence/03-competitive-intelligence.png"
         alt="Dermabay competitive landscape analysis"
         loading="lazy"
       />
+      </a>
       <figcaption>
         <span>03</span>
         <div>
@@ -1978,11 +2341,17 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
     </figure>
 
     <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/dermabay/evidence/04-strategic-gap.png"
+        data-caption="04 — Strategic gap. From feature-led claims to proof-backed choice."
+      >
       <img
         src="/projects/dermabay/evidence/04-strategic-gap.png"
         alt="Dermabay strategic gap and proof-backed choice framework"
         loading="lazy"
       />
+      </a>
       <figcaption>
         <span>04</span>
         <div>
@@ -1993,11 +2362,17 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
     </figure>
 
     <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/dermabay/evidence/05-content-system.png"
+        data-caption="05 — Content system. Problem-to-proof architecture across the customer journey."
+      >
       <img
         src="/projects/dermabay/evidence/05-content-system.png"
         alt="Dermabay problem-to-proof content system"
         loading="lazy"
       />
+      </a>
       <figcaption>
         <span>05</span>
         <div>
@@ -2008,11 +2383,17 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
     </figure>
 
     <figure class="evidence-card">
+      <a
+        class="evidence-card-link evidence-trigger"
+        href="/projects/dermabay/evidence/06-experiment-design.png"
+        data-caption="06 — Experiment design. Control vs. variant testing and proposed measurement signals."
+      >
       <img
         src="/projects/dermabay/evidence/06-experiment-design.png"
         alt="Dermabay proposed A/B test and measurement design"
         loading="lazy"
       />
+      </a>
       <figcaption>
         <span>06</span>
         <div>
@@ -2022,6 +2403,14 @@ const nextProject = index < projectsList.length - 1 ? projectsList[index + 1] : 
       </figcaption>
     </figure>
 
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Evidence image preview">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <figure class="lightbox-figure">
+      <img src="" alt="" />
+      <figcaption></figcaption>
+    </figure>
   </div>
 </div>
 )}

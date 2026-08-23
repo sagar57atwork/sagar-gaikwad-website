@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 800" width="100%" height="100%">
+  <defs>
+    <!-- Axis Arrowhead -->
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#222222" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2000" height="800" fill="#FAF9F6" />
+
+  <!-- Global Typography Styles -->
+  <style>
+    .title { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 32px; font-weight: bold; fill: #222222; }
+    .subtitle { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px; font-weight: normal; fill: #555555; }
+    .axis-label { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #222222; letter-spacing: 2px; text-transform: uppercase; }
+    .step-title { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 17px; font-weight: 700; fill: #222222; }
+    .step-desc { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 400; fill: #555555; }
+    .contrast-label { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #B04A32; }
+  </style>
+
+  <!-- Header -->
+  <text x="100" y="80" class="title">The Evidence Ladder</text>
+  <text x="100" y="115" class="subtitle">"What people say" is generally weaker evidence than "what people actually do."</text>
+  
+  <!-- Divider -->
+  <line x1="100" y1="145" x2="1900" y2="145" stroke="#E2DFD8" stroke-width="2" />
+
+  <!-- Axes -->
+  <!-- Y-Axis (Customer Commitment) -->
+  <line x1="100" y1="680" x2="100" y2="120" stroke="#222222" stroke-width="2" marker-end="url(#axis-arrow)" />
+  <text x="-480" y="60" transform="rotate(-90)" class="axis-label">Customer Commitment Level</text>
+
+  <!-- X-Axis (Progression) -->
+  <line x1="80" y1="680" x2="1920" y2="680" stroke="#222222" stroke-width="2" marker-end="url(#axis-arrow)" />
+  <text x="880" y="730" class="axis-label">Progression of Market Signals</text>
+
+  <!-- Shaded Area Under Steps -->
+  <path d="M 100 680 L 100 620 L 400 620 L 400 530 L 700 530 L 700 440 L 1000 440 L 1000 350 L 1300 350 L 1300 260 L 1600 260 L 1600 170 L 1900 170 L 1900 680 Z" fill="#B04A32" opacity="0.06" />
+
+  <!-- The Steps (Ladder Path) -->
+  <path d="M 100 620 L 400 620 L 400 530 L 700 530 L 700 440 L 1000 440 L 1000 350 L 1300 350 L 1300 260 L 1600 260 L 1600 170 L 1900 170" fill="none" stroke="#B04A32" stroke-width="4" stroke-linejoin="round" />
+
+  <!-- Step Nodes (Circles on vertices) -->
+  <circle cx="100" cy="620" r="6" fill="#FAF9F6" stroke="#B04A32" stroke-width="3" />
+  <circle cx="400" cy="530" r="6" fill="#FAF9F6" stroke="#B04A32" stroke-width="3" />
+  <circle cx="700" cy="440" r="6" fill="#FAF9F6" stroke="#B04A32" stroke-width="3" />
+  <circle cx="1000" cy="350" r="6" fill="#FAF9F6" stroke="#B04A32" stroke-width="3" />
+  <circle cx="1300" cy="260" r="6" fill="#FAF9F6" stroke="#B04A32" stroke-width="3" />
+  <circle cx="1600" cy="170" r="6" fill="#FAF9F6" stroke="#B04A32" stroke-width="3" />
+
+  <!-- Annotations / Step Text (Positioned cleanly inside each step's space) -->
+  
+  <!-- Step 1 -->
+  <text x="120" y="575" class="step-title">Social Media Likes &amp; Comments</text>
+  <text x="120" y="600" class="step-desc">Requires almost zero commitment.</text>
+
+  <!-- Step 2 -->
+  <text x="420" y="485" class="step-title">Ad Clicks (Message Resonance)</text>
+  <text x="420" y="510" class="step-desc">Proves copy works, but doesn't pay suppliers.</text>
+
+  <!-- Step 3 -->
+  <text x="720" y="395" class="step-title">Email Signup for Updates</text>
+  <text x="720" y="420" class="step-desc">Gave personal data to learn more (Engagement).</text>
+
+  <!-- Step 4 -->
+  <text x="1020" y="305" class="step-title">Waitlist at a Specific Price</text>
+  <text x="1020" y="330" class="step-desc">Strong evidence of intent (Qualified intent).</text>
+
+  <!-- Step 5 -->
+  <text x="1320" y="215" class="step-title">Pre-order / Deposit</text>
+  <text x="1320" y="240" class="step-desc">Exceptional evidence (Purchase intent).</text>
+
+  <!-- Step 6 -->
+  <text x="1620" y="125" class="step-title">Actual Purchase</text>
+  <text x="1620" y="150" class="step-desc">Transaction complete (Observed behavior).</text>
+
+
+  <!-- Contrast Labels to Emphasize Spectrum -->
+  <text x="120" y="665" class="contrast-label" fill="#666666" font-size="16">WEAK SIGNAL (Interest)</text>
+  <text x="1560" y="100" class="contrast-label" font-size="16">STRONG SIGNAL (Demand)</text>
+  
+  <!-- Guide line for strong signal -->
+  <path d="M 1795 95 L 1835 95 L 1835 130" fill="none" stroke="#B04A32" stroke-width="2" marker-end="url(#axis-arrow)" />
+
+</svg>

@@ -38,15 +38,6 @@ const work = [
     tags: ["Notion", "Agency Ops", "Retention"],
     featured: true,
   },
-  {
-    number: "05",
-    slug: "local-search-growth",
-    type: "PRACTICE CASE STUDY",
-    title: "Local Search Growth",
-    text: "A research-led approach to Google Business Profile, local SEO and customer acquisition for local businesses.",
-    tags: ["Positioning", "Growth"],
-    featured: false,
-  },
 ];
 
 const capabilityGroups = [
@@ -57,7 +48,6 @@ const capabilityGroups = [
 ];
 
 const insights = [
-  { title: "Why Marketing Strategy Should Start With Research", slug: "marketing-strategy-test" },
   { title: "What AI changes about modern marketing research", slug: "what-ai-changes-about-modern-marketing-research" },
   { title: "Why good content strategy starts with positioning", slug: "why-good-content-strategy-starts-with-positioning" },
 ];
@@ -71,9 +61,11 @@ const process = [
 ];
 
 const linkedinPosts = [
-  { date: "Marketing Strategy", title: "Marketing strategy should start with research", text: "Understanding the market and the audience comes before choosing channels. Tactics chosen without evidence are guesses that only look like strategy." },
-  { date: "AI & Marketing", title: "AI is changing how marketing research gets done", text: "AI is not replacing the researcher — it collapses the time between gathering evidence and finding the signal. The advantage goes to people who structure research well enough to use it responsibly." },
-  { date: "Content Strategy", title: "Why content strategy starts with positioning", text: "Content works when it knows who it is for and what belief it is meant to change. Positioning comes first; the content is just what that position sounds like in practice." },
+  { category: "Growth / Outreach", title: "The Sales Email Playbook: 7 Proven Principles That Turn Cold Outreach Into Real Conversations", text: "Seven practical principles for turning cold outreach into conversations that actually get replied to.", url: "https://www.linkedin.com/pulse/sales-email-playbook-7-proven-principles-turn-cold-outreach-gaikwad-jk1bf/?trackingId=QYMErQ4wTMmlQU%2BwXyeqAg%3D%3D" },
+  { category: "Local SEO / Strategy", title: "Why Most Local Businesses Don't Need SEO. They Need This.", text: "A look at why most local businesses reach for SEO before the fundamentals that actually matter.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7483732223288901632/" },
+  { category: "Marketing Strategy", title: "The Biggest Marketing Mistake Most Businesses Still Make", text: "The recurring marketing mistake that keeps most businesses from making real progress.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7483470825304514560/" },
+  { category: "Business / Strategy", title: "Why Profitable Businesses Still Feel Chaotic?", text: "Why a profitable business can still feel chaotic — and where the real order needs to live.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7488084656161153024/" },
+  { category: "Marketing Strategy", title: "The easiest way to waste your marketing budget?", text: "The easiest way to waste a marketing budget — a trap many teams don't see coming.", url: "https://www.linkedin.com/feed/update/urn:li:activity:7480593083244503043/" },
 ];
 
 const slugify = (value) =>
@@ -1373,14 +1365,14 @@ const slugify = (value) =>
           <div class="linkedin-list">
             {linkedinPosts.map((post) => (
               <article class="linkedin-card">
-                <div class="post-label">{post.date}</div>
+                <div class="post-label">{post.category}</div>
                 <h3>{post.title}</h3>
                 <p>{post.text}</p>
                 <a
                   class="linkedin-profile-link"
-                  href="https://www.linkedin.com/in/sagargaikwadofficial/"
+                  href={post.url}
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   View on LinkedIn ↗
                 </a>

@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <!-- Standard Arrowhead -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#222222" />
+    </marker>
+    <!-- Accent Arrowhead -->
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B04A32" />
+    </marker>
+    <!-- Waitlist / intent dashed arrow -->
+    <marker id="arrow-dashed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666666" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="#FAF9F6" />
+
+  <!-- Global Typography Styles -->
+  <style>
+    .title { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 32px; font-weight: bold; fill: #222222; }
+    .subtitle { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px; font-weight: normal; fill: #555555; }
+    .section-header { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #B04A32; letter-spacing: 1.5px; text-transform: uppercase; }
+    .box-text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: #222222; }
+    .box-text-dim { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 600; fill: #777777; }
+    .detail-text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 400; fill: #444444; }
+    .detail-bold { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 700; fill: #222222; }
+  </style>
+
+  <!-- Header -->
+  <text x="100" y="80" class="title">The Demand Validation Process</text>
+  <text x="100" y="115" class="subtitle">Test whether people actually want a product before spending heavily to build it.</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="145" x2="1500" y2="145" stroke="#E2DFD8" stroke-width="2" />
+
+  <!-- SECTION 1: CONVENTIONAL APPROACH -->
+  <text x="100" y="200" class="section-header">The Conventional Approach</text>
+  <text x="100" y="225" class="detail-text" fill="#777">Dangerously expensive: Forces you to rely on marketing to sell a product people may not want.</text>
+
+  <!-- Flow 1 Container -->
+  <rect x="100" y="250" width="1400" height="90" rx="8" fill="#F0EFEA" stroke="#E2DFD8" stroke-width="1" />
+
+  <!-- Flow 1 Nodes (Idea -> Product -> Branding -> Packaging -> Website -> MOQ -> Ads -> Hope) -->
+  <!-- Box 1 -->
+  <rect x="115" y="270" width="135" height="50" rx="4" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <text x="182" y="300" text-anchor="middle" class="box-text">Idea</text>
+  <line x1="250" y1="295" x2="280" y2="295" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Box 2 -->
+  <rect x="290" y="270" width="135" height="50" rx="4" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <text x="357" y="300" text-anchor="middle" class="box-text">Product</text>
+  <line x1="425" y1="295" x2="455" y2="295" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Box 3 -->
+  <rect x="465" y="270" width="135" height="50" rx="4" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <text x="532" y="300" text-anchor="middle" class="box-text">Branding</text>
+  <line x1="600" y1="295" x2="630" y2="295" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Box 4 -->
+  <rect x="640" y="270" width="135" height="50" rx="4" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <text x="707" y="300" text-anchor="middle" class="box-text">Packaging</text>
+  <line x1="775" y1="295" x2="805" y2="295" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Box 5 -->
+  <rect x="815" y="270" width="135" height="50" rx="4" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <text x="882" y="300" text-anchor="middle" class="box-text">Website</text>
+  <line x1="950" y1="295" x2="980" y2="295" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Box 6 -->
+  <rect x="990" y="270" width="135" height="50" rx="4" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <text x="1057" y="300" text-anchor="middle" class="box-text">MOQ (Inventory)</text>
+  <line x1="1125" y1="295" x2="1155" y2="295" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Box 7 -->
+  <rect x="1165" y="270" width="135" height="50" rx="4" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <text x="1232" y="300" text-anchor="middle" class="box-text">Ads</text>
+  <line x1="1300" y1="295" x2="1330" y2="295" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Box 8 (Dimmed to show weak outcome) -->
+  <rect x="1340" y="270" width="135" height="50" rx="4" fill="#EAEAEA" stroke="#999999" stroke-width="1.5" stroke-dasharray="4" />
+  <text x="1407" y="300" text-anchor="middle" class="box-text-dim">Hope people buy</text>
+
+  <!-- SECTION 2: EVIDENCE-LED APPROACH -->
+  <text x="100" y="390" class="section-header" fill="#222">The Research-Led Approach</text>
+  <text x="100" y="415" class="detail-text">Makes learning from uncertainty cheaper: Use marketing as a research system before ordering inventory.</text>
+
+  <!-- Flow 2 Nodes (Product Idea -> Small Demand Test -> Observe -> Collect -> Decision) -->
+  <!-- Box 1 -->
+  <rect x="100" y="440" width="240" height="60" rx="6" fill="#FFFFFF" stroke="#B04A32" stroke-width="2" />
+  <text x="220" y="475" text-anchor="middle" class="box-text">Product Idea</text>
+  <line x1="340" y1="470" x2="380" y2="470" stroke="#B04A32" stroke-width="2.5" marker-end="url(#arrow-accent)" />
+
+  <!-- Box 2 (Highlighted for breakdown) -->
+  <rect x="390" y="440" width="240" height="60" rx="6" fill="#B04A32" stroke="#B04A32" stroke-width="2" />
+  <text x="510" y="475" text-anchor="middle" class="box-text" fill="#FFFFFF">Small Demand Test</text>
+  <line x1="630" y1="470" x2="670" y2="470" stroke="#B04A32" stroke-width="2.5" marker-end="url(#arrow-accent)" />
+
+  <!-- Box 3 -->
+  <rect x="680" y="440" width="240" height="60" rx="6" fill="#FFFFFF" stroke="#B04A32" stroke-width="2" />
+  <text x="800" y="475" text-anchor="middle" class="box-text">Observe Behaviour</text>
+  <line x1="920" y1="470" x2="960" y2="470" stroke="#B04A32" stroke-width="2.5" marker-end="url(#arrow-accent)" />
+
+  <!-- Box 4 -->
+  <rect x="970" y="440" width="240" height="60" rx="6" fill="#FFFFFF" stroke="#B04A32" stroke-width="2" />
+  <text x="1090" y="475" text-anchor="middle" class="box-text">Collect Evidence</text>
+  <line x1="1210" y1="470" x2="1250" y2="470" stroke="#B04A32" stroke-width="2.5" marker-end="url(#arrow-accent)" />
+
+  <!-- Box 5 -->
+  <rect x="1260" y="440" width="240" height="60" rx="6" fill="#FFFFFF" stroke="#B04A32" stroke-width="2" />
+  <text x="1380" y="475" text-anchor="middle" class="box-text">Inventory Decision</text>
+
+  <!-- Connective line to Fake-Door Details -->
+  <path d="M 510 500 L 510 530 L 100 530 L 100 560" fill="none" stroke="#B04A32" stroke-width="1.5" stroke-dasharray="6" />
+  <path d="M 100 560 L 1500 560 L 1500 870 L 100 870 Z" fill="none" stroke="#B04A32" stroke-width="1.5" stroke-dasharray="6" rx="8" />
+
+  <!-- SECTION 3: FAKE-DOOR TEST ZOOM -->
+  <text x="130" y="600" class="section-header" fill="#B04A32">Inside the "Small Demand Test": The Ethical Fake-Door</text>
+  <text x="130" y="625" class="detail-text">A pre-launch intent experiment. Do not be deceptive. The goal is to see if users will attempt to transact at a specific price.</text>
+
+  <!-- Fake Door Flow -->
+  <!-- Step A: Traffic -->
+  <rect x="140" y="660" width="200" height="120" rx="6" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <text x="240" y="700" text-anchor="middle" class="detail-bold">Targeted Ads</text>
+  <text x="240" y="725" text-anchor="middle" class="detail-text" fill="#666">Small specific budget</text>
+  <text x="240" y="745" text-anchor="middle" class="detail-text" fill="#666">(e.g., ₹8,000 on Meta)</text>
+  
+  <line x1="340" y1="720" x2="410" y2="720" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="375" y="710" text-anchor="middle" class="detail-text" font-size="12">Clicks</text>
+
+  <!-- Step B: Landing Page -->
+  <rect x="430" y="660" width="320" height="180" rx="6" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <rect x="430" y="660" width="320" height="40" fill="#F0EFEA" rx="6" />
+  <text x="590" y="685" text-anchor="middle" class="detail-bold">Pre-Launch Landing Page</text>
+  
+  <!-- Content Mockup -->
+  <rect x="460" y="720" width="80" height="80" fill="#E2DFD8" rx="4" />
+  <text x="500" y="765" text-anchor="middle" font-size="12" fill="#888">3D Render</text>
+  
+  <text x="560" y="735" class="detail-bold">Proposed Product Name</text>
+  <text x="560" y="760" class="detail-bold" fill="#B04A32">Clear Price (e.g., ₹2,500)</text>
+  
+  <rect x="560" y="780" width="120" height="30" fill="#222222" rx="4" />
+  <text x="620" y="800" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="bold">Buy Now</text>
+
+  <line x1="750" y1="720" x2="840" y2="720" stroke="#222222" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="795" y="710" text-anchor="middle" class="detail-text" font-size="12">Clicks "Buy"</text>
+
+  <!-- Step C: Ethical Popup -->
+  <rect x="860" y="660" width="340" height="180" rx="6" fill="#FFFFFF" stroke="#222222" stroke-width="1.5" />
+  <rect x="860" y="660" width="340" height="40" fill="#F0EFEA" rx="6" />
+  <text x="1030" y="685" text-anchor="middle" class="detail-bold">Ethical Early-Access Popup</text>
+  
+  <text x="1030" y="730" text-anchor="middle" class="detail-bold">"We are finalizing our first production run."</text>
+  <text x="1030" y="755" text-anchor="middle" class="detail-text">Join the VIP list to get 10% off when we launch.</text>
+  
+  <rect x="910" y="780" width="160" height="30" fill="#FAF9F6" stroke="#CCC" stroke-width="1" rx="4" />
+  <text x="920" y="800" class="detail-text" fill="#999">Email Address</text>
+  
+  <rect x="1080" y="780" width="80" height="30" fill="#B04A32" rx="4" />
+  <text x="1120" y="800" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="bold">Submit</text>
+
+  <!-- Step D: Data Analysis -->
+  <line x1="1200" y1="720" x2="1280" y2="720" stroke="#666666" stroke-width="2" stroke-dasharray="4" marker-end="url(#arrow-dashed)" />
+  
+  <rect x="1300" y="660" width="170" height="180" rx="6" fill="#F0EFEA" stroke="#E2DFD8" stroke-width="1.5" />
+  <text x="1385" y="690" text-anchor="middle" class="detail-bold">The Decision</text>
+  <text x="1385" y="730" text-anchor="middle" class="detail-text">Calculate cost per</text>
+  <text x="1385" y="750" text-anchor="middle" class="detail-text">qualified waitlist.</text>
+  
+  <text x="1385" y="790" text-anchor="middle" class="detail-bold" fill="#B04A32">GO / ITERATE / STOP</text>
+
+</svg>
